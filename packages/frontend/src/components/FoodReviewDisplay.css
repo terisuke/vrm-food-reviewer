@@ -1,0 +1,274 @@
+.food-review-display {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.review-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.review-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: #feca57;
+  font-size: 1.5rem;
+}
+
+.review-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.food-type {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.emotion-sequence {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.emotion-marker {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.emotion-marker:hover {
+  transform: scale(1.2);
+}
+
+.emotion-marker.emotion-joy {
+  background: linear-gradient(45deg, #feca57, #ff9ff3);
+}
+
+.emotion-marker.emotion-surprised {
+  background: linear-gradient(45deg, #54a0ff, #5f27cd);
+}
+
+.emotion-marker.emotion-satisfied {
+  background: linear-gradient(45deg, #5f27cd, #a55eea);
+}
+
+.emotion-marker.emotion-neutral {
+  background: linear-gradient(45deg, #6c5ce7, #74b9ff);
+}
+
+.food-image-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.food-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.review-content {
+  margin: 1.5rem 0;
+}
+
+.long-review,
+.short-review {
+  margin-bottom: 1.5rem;
+}
+
+.long-review h3,
+.short-review h3 {
+  margin: 0 0 0.8rem 0;
+  color: #74b9ff;
+  font-size: 1.1rem;
+}
+
+.review-text {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #feca57;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.review-text.short {
+  border-left-color: #74b9ff;
+  font-size: 0.95rem;
+}
+
+.character-count {
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.restaurant-context {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.restaurant-context h3 {
+  margin: 0 0 0.8rem 0;
+  color: #55a3ff;
+  font-size: 1.1rem;
+}
+
+.restaurant-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.restaurant-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #feca57;
+}
+
+.restaurant-info {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.rating {
+  background: linear-gradient(45deg, #feca57, #ff9ff3);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.category {
+  background: linear-gradient(45deg, #74b9ff, #0984e3);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.restaurant-address {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  display: block;
+  font-weight: 600;
+  color: #feca57;
+  font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .food-review-display {
+    padding: 1rem;
+  }
+  
+  .review-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .emotion-sequence {
+    align-self: flex-end;
+  }
+  
+  .emotion-marker {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1rem;
+  }
+  
+  .restaurant-info {
+    gap: 0.5rem;
+  }
+  
+  .review-stats {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.8rem;
+  }
+  
+  .stat {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .food-image {
+    max-height: 150px;
+  }
+  
+  .review-text {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .review-text.short {
+    font-size: 0.9rem;
+  }
+  
+  .restaurant-details {
+    gap: 0.4rem;
+  }
+  
+  .restaurant-name {
+    font-size: 1rem;
+  }
+}

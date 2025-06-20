@@ -1,0 +1,36 @@
+{
+  "name": "vrm-food-reviewer",
+  "version": "1.0.0",
+  "description": "AI-generated passionate food reviews delivered by VRM characters",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=packages/backend\" \"npm run dev --workspace=packages/frontend\"",
+    "build": "npm run build --workspace=packages/shared && npm run build --workspace=packages/backend && npm run build --workspace=packages/frontend",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "keywords": [
+    "vrm",
+    "ai",
+    "food-review",
+    "voicevox",
+    "google-maps",
+    "react",
+    "typescript"
+  ],
+  "author": "Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
